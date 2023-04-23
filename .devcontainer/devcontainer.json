@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/ubuntu
+{
+  "dockerComposeFile": "../docker-compose.dev.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "eamodio.gitlens",
+        "christian-kohler.path-intellisense",
+        "sleistner.vscode-fileutils",
+        "exodiusstudios.comment-anchors",
+        "shd101wyy.markdown-preview-enhanced",
+        "donjayamanne.githistory",
+        "tht13.html-preview-vscode",
+        "ecmel.vscode-html-css",
+        "esbenp.prettier-vscode",
+        "tabnine.tabnine-vscode",
+        "tabten.tabten-vscode",
+        "abusaidm.html-snippets",
+        "sidthesloth.html5-boilerplate",
+        "dbaeumer.vscode-eslint",
+        "ms-edgedevtools.vscode-edge-devtools",
+        "xabikos.javascriptsnippets"
+      ]
+    }
+  }
+}
