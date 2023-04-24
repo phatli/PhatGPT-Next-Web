@@ -60,7 +60,7 @@ export function getLang(): Lang {
     }
   }
 
-  return "en";
+  return "cn";
 }
 
 export function changeLang(lang: Lang) {
