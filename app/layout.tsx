@@ -3,6 +3,7 @@ import "./styles/globals.scss";
 import "./styles/markdown.scss";
 import "./styles/highlight.scss";
 import { getBuildConfig } from "./config/build";
+import AuthContext from "./auth-context";
 
 const buildConfig = getBuildConfig();
 
@@ -18,8 +19,10 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  session,
 }: {
   children: React.ReactNode;
+  session: any;
 }) {
   return (
     <html lang="en">
@@ -43,7 +46,9 @@ export default function RootLayout({
         ></link>
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <AuthContext session={session}>{children}</AuthContext>
+      </body>
     </html>
   );
 }
