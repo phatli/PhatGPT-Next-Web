@@ -12,7 +12,7 @@ interface IProps {
   searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-const LoginPage = async () => {
+const LoginPage = () => {
   const userName = useRef("");
   const pass = useRef("");
   const router = useRouter();
