@@ -6,6 +6,7 @@ import { getBuildConfig } from "./config/build";
 import AuthContext from "./auth-context";
 
 const buildConfig = getBuildConfig();
+import { getClientConfig } from "./config/client";
 
 export const metadata = {
   title: "PhatGPT Next Web",
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="version" content={buildConfig.commitId} />
+        <meta name="config" content={JSON.stringify(getClientConfig())} />
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
